@@ -12,16 +12,3 @@ Cada Branch esta identificada con el nombre aula y el numero del aula correspond
 Ejemplo:  **aula-1**
 
 *En la rama principal (main) se encuentra el código base del proyecto para que pueda descargarlo e ir construyendo el codigo con el pasar de las aulas.*
-
-### Pre-requisitos y uso 📋
-
-Descarga el código que necesites seleccionando la Branch dentro de este repositorio y ábrelo con tu editor de código favorito. 
-
-
----
- Con :blue_heart: 
-- [Alura Latam](https://www.aluracursos.com/) 
-- [Instructora: Jeanmarie Quijada](https://github.com/JeanmarieAluraLatam) 
-
-
-
