@@ -1,3 +1,4 @@
+/* Variables CSS */
 :root {
   --gris: #aaa;
   --rojo: #e93d50;
@@ -6,13 +7,14 @@
   --luz: rgb(229, 255, 0);
 }
 
+/* Estilos Generales del Cuerpo */
 body {
   align-items: center;
-  /*azul celeste */ 
-  background: #5a5bf3; 
-  background: -moz-linear-gradient(left, #5a5bf3 0%, #91e7d9 100%); 
-  background: -webkit-linear-gradient(left, #5a5bf3 0%,#91e7d9 100%); 
-  background: linear-gradient(to right, #5a5bf3 0%,#91e7d9 100%);
+  /* Fondo con gradiente */
+  background: #5a5bf3;
+  background: -moz-linear-gradient(left, #5a5bf3 0%, #91e7d9 100%);
+  background: -webkit-linear-gradient(left, #5a5bf3 0%, #91e7d9 100%);
+  background: linear-gradient(to right, #5a5bf3 0%, #91e7d9 100%);
 
   display: flex;
   justify-content: center;
@@ -21,16 +23,17 @@ body {
   min-height: 100vh;
 }
 
+/* Estilos del Título Principal */
 h1 {
   color: var(--blanco);
   margin-bottom: 20px;
   font-size: 2rem;
   font-weight: 600;
-  
 }
 
+/* Contenedor del Teclado (botones) */
 .teclado {
-  background: linear-gradient(to bottom, #eeeeee 0%,#cccccc 100%);
+  background: linear-gradient(to bottom, #eeeeee 0%, #cccccc 100%);
   box-shadow: 6px 8px 0 6px #666, 10px 10px 10px #000;
   border-radius: 30px;
   display: grid;
@@ -39,6 +42,7 @@ h1 {
   padding: 10px;
 }
 
+/* Estilos de las Teclas Individuales */
 .tecla {
   background-color: var(--blanco);
   border-radius: 30px;
@@ -53,21 +57,24 @@ h1 {
   width: 120px;
 }
 
+/* Estilos de Tecla Activa o al Presionar */
 .tecla.activa,
 .tecla:active {
   background-color: var(--rojo);
-  border: 4px solid  var(--rojo);
+  border: 4px solid var(--rojo);
   box-shadow: 3px 3px 0 var(--rojo-oscuro) inset;
   color: var(--blanco);
   outline: none;
 }
 
+/* Estilos de Tecla al Recibir Foco (con Tab) */
 .tecla.focus,
 .tecla:focus {
   outline: none;
   box-shadow: 1px 1px 10px var(--luz);
 }
 
+/* Estilos Combinados: Tecla Activa y con Foco */
 .tecla.active:focus,
 .tecla:active:focus {
   box-shadow: 3px 3px 0 var(--rojo-oscuro) inset, 1px 1px 10px var(--luz);
