@@ -1,41 +1,43 @@
+/**
+ * Reproduce el sonido del elemento de audio especificado.
+ * @param {string} idElementoAudio - Selector CSS del elemento <audio>.
+ */
 function playSonido(idElementoAudio) {
-  document.querySelector(idElementoAudio).play();
+  const elemento = document.querySelector(idElementoAudio);
+  if (elemento && elemento.tagName === "AUDIO") {
+    elemento.play();
+  }
 }
 
+/** @type {NodeListOf<HTMLButtonElement>} Lista de botones con clase 'tecla' */
 const listaDeTeclas = document.querySelectorAll(".tecla");
 
-for (let contador = 0; contador < listaDeTeclas.length; contador++) {
-  const tecla = listaDeTeclas[contador];
+listaDeTeclas.forEach((tecla) => {
+  // Extrae el nombre del instrumento desde la segunda clase del botón
   const instrumento = tecla.classList[1];
-  console.log(contador);
-
   const idAudio = `#sonido_${instrumento}`;
-  console.log(idAudio);
 
+  /**
+   * Evento click: Reproduce el sonido correspondiente al botón
+   */
   tecla.onclick = function () {
     playSonido(idAudio);
   };
+
+  /**
+   * Evento keydown: Añade clase 'activa' si se presiona Espacio o Enter
+   * @param {KeyboardEvent} evento
+   */
   tecla.onkeydown = function (evento) {
     if (evento.code === "Space" || evento.code === "Enter") {
       tecla.classList.add("activa");
     }
-    console.log(evento.code === "Space" || evento.code === "Enter");
   };
+
+  /**
+   * Evento keyup: Quita la clase 'activa' al soltar la tecla
+   */
   tecla.onkeyup = function () {
     tecla.classList.remove("activa");
   };
-}
-
-/* while (contador < 9) {
-  const tecla = listaDeTeclas[contador];
-  const instrumento = tecla.classList[1];
-
-  const idAudio = `#sonido_${instrumento}`;
-  console.log(idAudio);
-
-  tecla.onclick = function () {
-    playSonido(idAudio);
-  };
-  contador = contador + 1;
-}
- */
+});
