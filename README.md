@@ -72,4 +72,8 @@ Este proyecto fue posible gracias a los conocimientos adquiridos en el curso de 
 
 ---
 
+## 📄 Licencia
+
+Este proyecto es de código abierto y se publica bajo la [Licencia MIT](LICENSE). Siéntete libre de usar, modificar y distribuir este código para tus propios proyectos.
+
 ¡Explora, aprende y diviértete creando música con JavaScript! 🎶
